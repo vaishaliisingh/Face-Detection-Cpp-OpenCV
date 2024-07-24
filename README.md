@@ -5,10 +5,10 @@ The application captures video from the camera, detects faces, and displays the 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
-- [Setting Up OpenCV for C++](#setting-up-opencv-for-c++)
+- [Setting Up OpenCV for Cpp](#setting-up-opencv-for-cpp)
 - [Setting Up Visual Studio Code](#setting-up-visual-studio-code)
-- [Main Code Explanation](#main-code-explanation)
-- [Running the Project](#running-the-project)
+- [Project Details](#project-details)
+- [How It Works](#how-it-works)
 
 ## Introduction
 This project utilizes the Haar Cascade Classifier for face detection. 
@@ -20,7 +20,7 @@ OpenCV is a powerful library for computer vision tasks, and this project demonst
 - OpenCV Library
 - Visual Studio Code Community Edition
 
-## Setting Up OpenCV for C++
+## Setting Up OpenCV for Cpp
 1. **Download OpenCV:**
    - Go to the [OpenCV releases page](https://opencv.org/releases/) and download the latest version of OpenCV.
    - Extract the downloaded file to a convenient location on your system.
@@ -49,7 +49,15 @@ OpenCV is a powerful library for computer vision tasks, and this project demonst
 4. **Configure Launch Settings:**
    - Create a `launch.json` file in the `.vscode` directory of your project.
    - Define the settings for debugging your project.
-   - 
+
 ## Project Details
 This project uses OpenCV's Haar Cascade Classifier for face detection. The classifier is trained to detect faces in real-time video streams. The application captures frames from the camera, converts them to grayscale, and uses the classifier to detect faces. Detected faces are highlighted with rectangles in the displayed video frames.
 
+## How It Works
+1. **Initialize the Camera**: The program opens a video stream from the camera.
+2. **Load Haar Cascade Classifier**: The pre-trained Haar Cascade Classifier is loaded for face detection.
+3. **Capture Frames**: Continuously capture frames from the camera.
+4. **Convert to Grayscale**: Convert each frame to grayscale to improve detection performance.
+5. **Detect Faces**: Use the Haar Cascade Classifier to detect faces in the grayscale frame.
+6. **Draw Rectangles**: Draw rectangles around detected faces in the original frame.
+7. **Display the Frame**: Display the processed frame with detected faces.
