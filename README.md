@@ -19,3 +19,18 @@ OpenCV is a powerful library for computer vision tasks, and this project demonst
 - C++ Compiler (e.g., MinGW for Windows, GCC for Linux/MacOS)
 - OpenCV Library
 - Visual Studio Code Community Edition
+
+## Setting Up OpenCV for C++
+1. **Download OpenCV:**
+   - Go to the [OpenCV releases page](https://opencv.org/releases/) and download the latest version of OpenCV.
+   - Extract the downloaded file to a convenient location on your system.
+2. **Set Up Environment Variables (Windows):**
+   - Open the Start Menu and search for "Environment Variables".
+   - Click "Edit the system environment variables".
+   - In the System Properties window, click the "Environment Variables" button.
+   - Under "System variables", find and select the `Path` variable, then click "Edit".
+   - Add the path to the `bin` directory of your OpenCV installation (e.g., `C:\opencv\build\x64\vc15\bin`).
+3. **Configure OpenCV in Your Project:**
+   - Add the OpenCV include directories to your compiler's include path.
+   - Add the OpenCV library directories to your linker settings.
+   - Link against the necessary OpenCV libraries (e.g., `opencv_world455.lib` for static linking on Windows).
