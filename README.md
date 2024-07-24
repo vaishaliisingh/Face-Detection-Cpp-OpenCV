@@ -34,3 +34,22 @@ OpenCV is a powerful library for computer vision tasks, and this project demonst
    - Add the OpenCV include directories to your compiler's include path.
    - Add the OpenCV library directories to your linker settings.
    - Link against the necessary OpenCV libraries (e.g., `opencv_world455.lib` for static linking on Windows).
+
+## Setting Up Visual Studio Code
+1. **Download and Install VS Code:**
+   - Go to the [Visual Studio Code website](https://code.visualstudio.com/) and download the installer for your operating system.
+   - Install Visual Studio Code by following the installer instructions.
+2. **Install C++ Extensions:**
+   - Open VS Code.
+   - Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
+   - Search for "C++" and install the "C/C++" extension by Microsoft.
+3. **Configure Build Tasks:**
+   - Create a `tasks.json` file in the `.vscode` directory of your project.
+   - Define tasks to build and run your project.
+4. **Configure Launch Settings:**
+   - Create a `launch.json` file in the `.vscode` directory of your project.
+   - Define the settings for debugging your project.
+   - 
+## Project Details
+This project uses OpenCV's Haar Cascade Classifier for face detection. The classifier is trained to detect faces in real-time video streams. The application captures frames from the camera, converts them to grayscale, and uses the classifier to detect faces. Detected faces are highlighted with rectangles in the displayed video frames.
+
