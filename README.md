@@ -1,6 +1,6 @@
 # Face Detection in C++ using OpenCV
-This project demonstrates real-time face detection using OpenCV in C++. 
-The application captures video from the camera, detects faces, and displays the results with rectangles drawn around the detected faces.
+This project demonstrates real-time face detection using OpenCV in C++. The application captures video from the camera, detects faces, and displays 
+the results with rectangles around the detected faces and the count of faces displayed on the video frame.
 
 ## Table of Contents
 - [Introduction](#introduction)
