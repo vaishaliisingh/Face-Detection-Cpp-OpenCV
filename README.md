@@ -51,7 +51,7 @@ OpenCV is a powerful library for computer vision tasks, and this project demonst
    - Define the settings for debugging your project.
 
 ## Project Details
-This project uses OpenCV's Haar Cascade Classifier for face detection. The classifier is trained to detect faces in real-time video streams. The application captures frames from the camera, converts them to grayscale, and uses the classifier to detect faces. Detected faces are highlighted with rectangles in the displayed video frames.
+This project uses OpenCV's Haar Cascade Classifier for face detection. The classifier is trained to detect faces in real-time video streams. The application captures frames from the camera, converts them to grayscale, and uses the classifier to detect faces. Detected faces are highlighted with rectangles in the displayed video frames, and the number of detected faces is displayed on the screen.
 
 ## How It Works
 1. **Initialize the Camera**: The program opens a video stream from the camera.
@@ -59,5 +59,5 @@ This project uses OpenCV's Haar Cascade Classifier for face detection. The class
 3. **Capture Frames**: Continuously capture frames from the camera.
 4. **Convert to Grayscale**: Convert each frame to grayscale to improve detection performance.
 5. **Detect Faces**: Use the Haar Cascade Classifier to detect faces in the grayscale frame.
-6. **Draw Rectangles**: Draw rectangles around detected faces in the original frame.
-7. **Display the Frame**: Display the processed frame with detected faces.
+6. **Draw Rectangles and Display Count**: Draw rectangles around detected faces in the original frame and display the number of faces detected.
+7. **Display the Frame**: Display the processed frame with detected faces and count.
