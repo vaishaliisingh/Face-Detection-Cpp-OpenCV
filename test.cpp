@@ -3,6 +3,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/objdetect.hpp>
 #include <iostream>
+#include <sstream> // for string streams
 
 using namespace std;
 using namespace cv;
@@ -15,20 +16,16 @@ int main() {
         return -1;
     }
 
-    // Attempt to open the camera (try index 0 if index 1 fails)
-    VideoCapture video(1);
+    // Open the camera
+    VideoCapture video(0);
     if (!video.isOpened()) {
-        cout << "Error: Could not open video stream from camera 1." << endl;
-        cout << "Trying camera 0..." << endl;
-        video.open(0);
-        if (!video.isOpened()) {
-            cout << "Error: Could not open video stream from camera 0 either." << endl;
-            return -1;
-        }
+        cout << "Error: Could not open video stream from the camera." << endl;
+        return -1;
     }
 
-    Mat img;  // Mat is a data type in C++ that represents an image
+    Mat img;
     vector<Rect> faces;
+    int screenshotCount = 0; // Counter for naming screenshot files
 
     while (true) {
         // Read a new frame from the camera
@@ -60,11 +57,20 @@ int main() {
         // Show the frame with detected faces in a window named "Frame"
         imshow("Frame", img);
 
-        // Wait for 1 ms to see if the user presses a key
-        if (waitKey(1) >= 0) {
+        // Wait for key press
+        char key = (char)waitKey(1);
+
+        if (key == 'q') { // Quit the application
             break;
+        } else if (key == 's') { // Save a screenshot
+            stringstream screenshotName;
+            screenshotName << "screenshot_" << screenshotCount << ".jpg";
+            imwrite(screenshotName.str(), img);
+            cout << "Screenshot saved as " << screenshotName.str() << endl;
+            screenshotCount++;
         }
     }
 
     return 0;
 }
+
